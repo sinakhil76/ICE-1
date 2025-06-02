@@ -51,7 +51,7 @@ public class CardTrick {
         Card luckycard = new Card();
         luckycard.setValue(2);
         luckycard.setSuit("Clubs");
-    }
+    
      // and search magicHand here
         boolean found = false;
         for (Card c : magicHand) {
@@ -69,4 +69,4 @@ public class CardTrick {
             System.out.println("Lucky card is not in the magic hand. You Lose");
         }
 
-}
+}}
