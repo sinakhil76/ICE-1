@@ -34,18 +34,25 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the card value (1 to 13): ");
-        int userValue = scanner.nextInt();
-        scanner.nextLine();
-        System.out.print("Enter the card suit (Hearts, Diamonds, Clubs, Spades): ");
-        String userSuit = scanner.nextLine();
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Enter the card value (1 to 13): ");
+        // int userValue = scanner.nextInt();
+        // scanner.nextLine();
+        // System.out.print("Enter the card suit (Hearts, Diamonds, Clubs, Spades): ");
+        // String userSuit = scanner.nextLine();
 
-        // Create the user's card
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
-        // and search magicHand here
+        // // Create the user's card
+        // Card userCard = new Card();
+        // userCard.setValue(userValue);
+        // userCard.setSuit(userSuit);
+       
+        // add one luckcard hard code 2,clubs
+
+        Card luckycard = Card();
+        luckycard.setValue(2);
+        luckycard.setSuit("Clubs");
+    }
+     // and search magicHand here
         boolean found = false;
         for (Card c : magicHand) {
             if (c.getValue() == userCard.getValue() &&
@@ -57,11 +64,9 @@ public class CardTrick {
         }
         //Then report the result here
         if (found) {
-            System.out.println("Your card is in the magic hand.");
+            System.out.println("Lucky card is in the magic hand. You Win");
         } else {
-            System.out.println("Your card is not in the magic hand.");
+            System.out.println("Lucky card is not in the magic hand. You Lose");
         }
-        // add one luckcard hard code 2,clubs
-    }
 
 }
