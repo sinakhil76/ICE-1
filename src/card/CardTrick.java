@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -48,15 +48,15 @@ public class CardTrick {
        
         // add one luckcard hard code 2,clubs
 
-        Card luckycard = Card();
+        Card luckycard = new Card();
         luckycard.setValue(2);
         luckycard.setSuit("Clubs");
     }
      // and search magicHand here
         boolean found = false;
         for (Card c : magicHand) {
-            if (c.getValue() == userCard.getValue() &&
-                c.getSuit().equalsIgnoreCase(userCard.getSuit())) {
+            if (c.getValue() == luckycard.getValue() &&
+                c.getSuit().equalsIgnoreCase(luckycard.getSuit())) {
                 found = true;
                 break;
             }
